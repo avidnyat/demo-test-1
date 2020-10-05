@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  def Namespace = "default"
-  def ImageName = "avidnyat/webapp-color"
-  def Creds = "cc3561e8-4e36-4410-bcc9-2ade7dfaf569"
-  try{
     stages {
         
                stage("repo checkout") {
@@ -25,7 +21,4 @@ pipeline {
         
         
       }
-    } catch (err) {
-      currentBuild.result = 'FAILURE'
-    }
-}
+  }
