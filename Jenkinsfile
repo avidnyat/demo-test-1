@@ -12,8 +12,6 @@ pipeline {
                    steps {
                       echo "Building Image"
                       sh "sudo ansible-playbook /home/ubuntu/ansible/build-image.yml -l web_server -u root  --extra-vars \"version=${env.BUILD_NUMBER}\""
-                      echo "Pushing Image"
-                      sh "docker push ${ImageName}"
                    }
                }
                
