@@ -5,8 +5,7 @@ pipeline {
   def Creds = "cc3561e8-4e36-4410-bcc9-2ade7dfaf569"
   try{
     stages {
-        stage('Build') {
-            stages {
+        
                stage("repo checkout") {
                    steps {
                       echo "Checking out repo"
@@ -22,8 +21,8 @@ pipeline {
                    }
                }
                
-            }
-        }
+           
+        
         
       }
     } catch (err) {
